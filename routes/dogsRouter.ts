@@ -4,6 +4,7 @@ const dogsRouter = new Router({ prefix: '/dogs' });
 
 dogsRouter.get('/', async (ctx, next) => {
   ctx.body = 'Dogs be here'
+  await next()
 });
 
-module.exports= dogsRouter;
+export default dogsRouter;
